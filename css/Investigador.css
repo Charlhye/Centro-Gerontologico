@@ -1,0 +1,15 @@
+body {
+  background-color: #eeeeee;
+}
+.table, th, td {
+    border: 1px solid black;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    background-color:#2E64FE;
+}
