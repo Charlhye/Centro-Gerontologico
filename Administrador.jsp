@@ -1,4 +1,7 @@
-<!DOCTYPE jsp>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
     <link href="css/foundation.css" rel="stylesheet"/>
@@ -27,11 +30,16 @@
     </div>
     <div class="large-6 medium-6 cell">
         <h5 align="center">Dar de baja</h5>
-        <form action="" method="post">
-            <select>
-
+        <form action="BajaUsuario" method="post">
+            <input name="user" type="hidden" value="${requestScope.user}"/>
+            <input name="password" type="hidden" value="${requestScope.password}">
+            <select name="usuarioABorrar">
+                <c:forEach items="${requestScope.usuarios}" var="it">
+                    <option value="${it.getNombre()}">${it.getNombre()}</option>
+                </c:forEach>
             </select>
-            <div align="center"><a type="submit" class="alert button">Dar de baja</a></div>
+            <div align="center"><input type="submit" class="alert button"></input></div>
+            <label style="color:red">${requestScope.statusBaja}</label>
         </form>
     </div>
 </div>

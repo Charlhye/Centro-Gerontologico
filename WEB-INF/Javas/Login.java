@@ -20,6 +20,7 @@ public class Login extends HttpServlet{
             String url = "jdbc:mysql://localhost:3306/" + base;
 
             Connection con = DriverManager.getConnection(url, usuario, password);
+
             Statement statement=con.createStatement();
             ResultSet query=statement.executeQuery("SELECT * FROM usuario where Nombre='"+usuario+"';");
             query.first();
@@ -33,6 +34,17 @@ public class Login extends HttpServlet{
                 case "Administrador":
                     request.setAttribute("user",usuario);
                     request.setAttribute("password", password);
+                    Statement usuarios=con.createStatement();
+                    ResultSet queryUsers=usuarios.executeQuery("SELECT * FROM usuario WHERE NOT Nombre='administrador'");
+                    Vector<Usuario> usuarios1=new Vector<>();
+                    while (queryUsers.next()){
+                        Usuario aux=new Usuario();
+                        aux.setIdUsuario(queryUsers.getInt("idUsuario"));
+                        aux.setNombre(queryUsers.getString("Nombre"));
+                        aux.setTipoUsuario(queryUsers.getString("Tipo_Usuario"));
+                        usuarios1.add(aux);
+                    }
+                    request.setAttribute("usuarios",usuarios1);
                     disp=getServletContext().getRequestDispatcher("/Administrador.jsp");
                     break;
                 case "Investigador" :
