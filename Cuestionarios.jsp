@@ -22,10 +22,14 @@
         <input name="user" type="hidden" value="${requestScope.user}"/>
         <input name="password" type="hidden" value="${requestScope.password}">
         <c:forEach items="${requestScope.preguntas}" var="preg">
+            <tr>
+                <td>${preg.titulo}</td>
+            </tr>
             <c:forEach items="${preg.getRespuestas()}" var="resp">
                 <tr>
-                    <td>${preg}</td>
-                    <td>${resp}</td>
+                    <td>
+                    </td>
+                    <td>${resp.descripcion}</td>
                     <td><input type="radio" name="${preg}"></td>
                 </tr>
             </c:forEach>
