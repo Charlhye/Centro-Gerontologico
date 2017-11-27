@@ -30,7 +30,7 @@
                     <td>
                     </td>
                     <td>${resp.descripcion}</td>
-                    <td><input type="radio" name="${preg}"></td>
+                    <td><input type="radio" name="${preg.titulo}" value="${resp.descripcion}"></td>
                 </tr>
             </c:forEach>
         </c:forEach>

@@ -1,4 +1,6 @@
-<!DOCTYPE jsp>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
   <head>     
      <link href="css/foundation.css" rel="stylesheet"/>
@@ -13,7 +15,7 @@
     }
   </script>
   <header>
-    <h1 align="center">Bienvenido Gloria Tellez</h1>
+    <h1 align="center">Bienvenido ${requestScope.user}</h1>
   </header>
   <body>
     <div class="wrapper">
@@ -24,23 +26,20 @@
       </form>
     </div>
     <form action="" method="post" target="_blank">
-      <div id="tabla">
-        <table style="width:100%">
+      <div style="margin: 20px;">
+        <table style="width:100% ">
           <tr>
             <th></th>
-            <th>Nombre</th>
-            <th>Fecha</th>
+            <th>Id del Cuestionario</th>
+            <th>Id del Trabajador</th>
           </tr>
-          <tr>
-            <td><input type="radio" name="encuestado" value="1"></td>
-            <td><a>Enrique Martinez Martinez</a></td>
-            <td>08/oct/2017</td>
-          </tr>
-          <tr>
-            <td><input type="radio" name="encuestado" value="2"></td>
-            <td><a>Jorge Hernandez Ochoa</a></td>
-            <td>05/sep/2017</td>
-          </tr>
+          <c:forEach items="${requestScope.cuestionarios}" var="it">
+            <tr>
+              <td></td>
+              <td>${it.getIdCuestionarioResuelto()}</td>
+              <td>${it.getNombreUsuario()}</td>
+            </tr>
+          </c:forEach>
         </table>
       </div>
       <div class="wrapper">

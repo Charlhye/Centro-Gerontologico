@@ -1,6 +1,10 @@
 package Beans;
 
 public class CuestionarioResuelto {
+    public int idCuestionarioResuelto;
+    public int idUsuario;
+    public String nombreUsuario;
+
     public int getIdCuestionarioResuelto() {
         return idCuestionarioResuelto;
     }
@@ -17,9 +21,6 @@ public class CuestionarioResuelto {
         this.idUsuario = idUsuario;
     }
 
-    public int idCuestionarioResuelto;
-    public int idUsuario;
-
     public String getNombreUsuario() {
         return nombreUsuario;
     }
@@ -28,5 +29,5 @@ public class CuestionarioResuelto {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public String nombreUsuario;
+
 }

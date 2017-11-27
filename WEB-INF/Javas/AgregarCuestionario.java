@@ -1,12 +1,16 @@
+import Beans.CuestionarioResuelto;
+import Beans.Pregunta;
+import Beans.Respuesta;
+
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.IOException;
+import java.sql.*;
+import java.util.Vector;
 
 @WebServlet("/AgregarCuestionario")
 public class AgregarCuestionario extends HttpServlet {
@@ -25,9 +29,52 @@ public class AgregarCuestionario extends HttpServlet {
 
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
-            Statement query = con.createStatement();
-            //Buscar en las respuestas por pregunta
-            //Subirlas a cuestionario_resuelto_respuesta
+
+            Statement usuario1 = con.createStatement();
+            ResultSet queryUsuario = usuario1.executeQuery("SELECT idUsuario FROM usuario WHERE  nombre='"+usuario+"'");
+            queryUsuario.first();
+            int id=queryUsuario.getInt("idUsuario");
+            Statement insert=con.createStatement();
+            insert.executeUpdate("INSERT into cuestionario_resuelto(idUsuario) Values('"+id+"');");
+
+            Statement order = con.createStatement();
+            ResultSet queryOrder = order.executeQuery("select idCuestionario_Resuelto from cuestionario_resuelto order by idCuestionario_Resuelto desc;");
+            queryOrder.first();
+            int idLast=queryOrder.getInt("idCuestionario_Resuelto");
+
+            Statement preguntas = con.createStatement();
+            ResultSet queryPreguntas = preguntas.executeQuery("SELECT * FROM pregunta");    //Query para buscar pregunta
+            while(queryPreguntas.next()){
+                String resp=request.getParameter(queryPreguntas.getString("Titulo"));
+                Statement aux = con.createStatement();
+                System.out.println(resp);
+                ResultSet queryId = aux.executeQuery("SELECT idRespuesta FROM respuesta WHERE descripcion='"+resp+"'");
+                queryId.first();
+                Statement insert2=con.createStatement();
+                insert2.executeUpdate("INSERT into cuestionario_resuelto_respuesta(idCuestionarioR,idRespuesta) Values('"+idLast+"','"+queryId.getInt("idRespuesta")+"')");
+
+            }
+
+            request.setAttribute("user",usuario);
+            request.setAttribute("password", password);
+            Statement statement=con.createStatement();
+            ResultSet cuestionarios=statement.executeQuery("SELECT Nombre, idCuestionario_Resuelto FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+id+";");
+            Vector<CuestionarioResuelto> cuestionarioResueltos=new Vector<>();
+            while(cuestionarios.next()){
+                CuestionarioResuelto aux=new CuestionarioResuelto();
+                aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
+                aux.setNombreUsuario(cuestionarios.getString("Nombre"));
+                cuestionarioResueltos.add(aux);
+            }
+            request.setAttribute("cuestionarios",cuestionarioResueltos);
+            RequestDispatcher disp=getServletContext().getRequestDispatcher("/Trabajador.jsp");
+            try {
+                disp.forward(request,response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
 
         } catch (SQLException e) {

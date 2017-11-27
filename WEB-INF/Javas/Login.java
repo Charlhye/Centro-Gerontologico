@@ -55,11 +55,22 @@ public class Login extends HttpServlet{
                     statement2=con.createStatement();
                     cuestionarios=statement2.executeQuery("SELECT Nombre, idCuestionario_Resuelto FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario;");
 
-                    while(cuestionarios.next()){
-                        CuestionarioResuelto aux=new CuestionarioResuelto();
-                        aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
-                        aux.setNombreUsuario(cuestionarios.getString("Nombre"));
-                        cuestionarioResueltos.add(aux);
+                    if(cuestionarios.first()) {
+                        while (cuestionarios.next()) {
+                            CuestionarioResuelto aux = new CuestionarioResuelto();
+                            aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
+                            aux.setNombreUsuario(cuestionarios.getString("Nombre"));
+                            cuestionarioResueltos.add(aux);
+                        }
+                    } else {
+                        Statement chance =con.createStatement();
+                        cuestionarios=chance.executeQuery("SELECT idCuestionario_Resuelto FROM cuestionario_resuelto");
+                        while (cuestionarios.next()) {
+                            CuestionarioResuelto aux = new CuestionarioResuelto();
+                            aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
+                            aux.setNombreUsuario("Ya no existe");
+                            cuestionarioResueltos.add(aux);
+                        }
                     }
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
                     break;
@@ -70,12 +81,15 @@ public class Login extends HttpServlet{
 
                     statement=con.createStatement();
                     cuestionarios=statement2.executeQuery("SELECT Nombre, idCuestionario_Resuelto FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+iduser+";");
-
                     while(cuestionarios.next()){
                         CuestionarioResuelto aux=new CuestionarioResuelto();
                         aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
                         aux.setNombreUsuario(cuestionarios.getString("Nombre"));
                         cuestionarioResueltos.add(aux);
+                    }
+                    for (CuestionarioResuelto it:cuestionarioResueltos
+                         ) {
+                        System.out.println(it.idCuestionarioResuelto);
                     }
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
                     break;
