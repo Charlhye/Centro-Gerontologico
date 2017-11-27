@@ -18,7 +18,9 @@
   <body>
     <div class="wrapper">
       <form action="RealizarEncuesta" method="post" target="_blank">
-          <a type="submit" class="success button">Realizar encuesta</a>
+        <input name="user" type="hidden" value="${requestScope.user}"/>
+        <input name="password" type="hidden" value="${requestScope.password}">
+          <input type="submit" class="success button" value="Realizar encuesta"></input>
       </form>
     </div>
     <form action="" method="post" target="_blank">

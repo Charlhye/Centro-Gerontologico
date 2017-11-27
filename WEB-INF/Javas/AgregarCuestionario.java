@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -5,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 @WebServlet("/AgregarCuestionario")
 public class AgregarCuestionario extends HttpServlet {
@@ -23,7 +25,7 @@ public class AgregarCuestionario extends HttpServlet {
 
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
-
+            Statement query = con.createStatement();
             //Buscar en las respuestas por pregunta
             //Subirlas a cuestionario_resuelto_respuesta
 
