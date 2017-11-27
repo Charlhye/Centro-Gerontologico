@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `centrogerontologico` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `centrogerontologico`;
--- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.19, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: centrogerontologico
+-- Host: localhost    Database: centrogerontologico
 -- ------------------------------------------------------
--- Server version	5.7.20
+-- Server version	5.7.19-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +28,7 @@ CREATE TABLE `cuestionario` (
   `idCuestionario` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`idCuestionario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,6 @@ CREATE TABLE `cuestionario` (
 
 LOCK TABLES `cuestionario` WRITE;
 /*!40000 ALTER TABLE `cuestionario` DISABLE KEYS */;
-INSERT INTO `cuestionario` VALUES (1,'Test');
 /*!40000 ALTER TABLE `cuestionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,10 +49,10 @@ DROP TABLE IF EXISTS `cuestionario_resuelto`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cuestionario_resuelto` (
   `idCuestionario_Resuelto` int(11) NOT NULL AUTO_INCREMENT,
-  `idUsuario` int(11) NOT NULL,
-  PRIMARY KEY (`idCuestionario_Resuelto`,`idUsuario`),
+  `idUsuario` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idCuestionario_Resuelto`),
   KEY `idUsuario_idx` (`idUsuario`),
-  CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE SET NULL ON UPDATE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +62,7 @@ CREATE TABLE `cuestionario_resuelto` (
 
 LOCK TABLES `cuestionario_resuelto` WRITE;
 /*!40000 ALTER TABLE `cuestionario_resuelto` DISABLE KEYS */;
-INSERT INTO `cuestionario_resuelto` VALUES (1,2);
+INSERT INTO `cuestionario_resuelto` VALUES (1,NULL);
 /*!40000 ALTER TABLE `cuestionario_resuelto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +106,7 @@ CREATE TABLE `pregunta` (
   PRIMARY KEY (`idPregunta`),
   KEY `idCuestionario_idx` (`idCuestionario`),
   CONSTRAINT `idCuestionario` FOREIGN KEY (`idCuestionario`) REFERENCES `cuestionario` (`idCuestionario`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +115,6 @@ CREATE TABLE `pregunta` (
 
 LOCK TABLES `pregunta` WRITE;
 /*!40000 ALTER TABLE `pregunta` DISABLE KEYS */;
-INSERT INTO `pregunta` VALUES (1,'Fecha de nacimiento',1),(2,'Años cumplidos',1),(3,'Género',1),(4,'Estado civil',1),(5,'Ocupación actual',1),(6,'Tiene servicio médico de',1),(7,'La casa donde habita es',1),(8,'¿Con quién comparte su hogar?',1),(9,'¿Alguien lo apoya económicamente?',1),(10,'¿Usted padece?',1);
 /*!40000 ALTER TABLE `pregunta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,14 +126,14 @@ DROP TABLE IF EXISTS `respuesta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `respuesta` (
-  `idRespuesta` int(11) NOT NULL AUTO_INCREMENT,
+  `idRespuesta` int(11) NOT NULL,
   `Tipo_Pregunta` int(11) NOT NULL,
   `Descripcion` varchar(100) NOT NULL,
   `idPregunta` int(11) NOT NULL,
   PRIMARY KEY (`idRespuesta`),
   KEY `idPregunta_idx` (`idPregunta`),
   CONSTRAINT `idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`idPregunta`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +142,6 @@ CREATE TABLE `respuesta` (
 
 LOCK TABLES `respuesta` WRITE;
 /*!40000 ALTER TABLE `respuesta` DISABLE KEYS */;
-INSERT INTO `respuesta` VALUES (1,1,'Día Mes Año',1),(2,2,'Abierta',2),(3,3,'1)Masculino 2)Femenino 3)Otro',3),(4,3,'1)Casado 2)Viudo(a) 3)Separada 4)Soltera(o)',4),(5,3,'1)empleado 2)negocio propio 3)jubilado 4)hogar',5),(6,3,'1)IMSS 2)ISSTE 3)Seguro popular 4) Hospital militar 5)No tiene ',6),(7,3,'1)Propia 2)Rentada 3)Prestada',7),(8,3,'1)Vive solo 2)Con su pareja 3)Algun hijo',8),(9,4,'1)Su pareja 2)Sus hijos 3)Sus hermanos',9),(10,4,'1)Problemas del corazón 2)Diabetes 3)Enfermedad pulmonar 4)Cáncer',10);
 /*!40000 ALTER TABLE `respuesta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +158,7 @@ CREATE TABLE `usuario` (
   `Nombre` varchar(45) NOT NULL,
   `Password` varchar(100) NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +167,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Investigador','PedroLopez','pass'),(2,'Trabajador','Lucia','pass');
+INSERT INTO `usuario` VALUES (1,'Administrador','administrador','adminpass');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -183,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-26 16:03:01
+-- Dump completed on 2017-11-26 18:22:20
