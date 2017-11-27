@@ -17,7 +17,7 @@
   </header>
   <body>
     <div class="wrapper">
-      <form action="" method="post" target="_blank">
+      <form action="RealizarEncuesta" method="post" target="_blank">
           <a type="submit" class="success button">Realizar encuesta</a>
       </form>
     </div>
