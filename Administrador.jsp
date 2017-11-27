@@ -12,7 +12,7 @@
 <div class="grid-x grid-padding-x">
     <div class="large-6 medium-6 cell">
         <h5 align="center">Dar de alta</h5>
-        <form action="AltaUsuario" method="post" target="_blank">
+        <form action="AltaUsuario" method="post">
             <input name="user" type="hidden" value="${requestScope.user}"/>
             <input name="password" type="hidden" value="${requestScope.password}">
             <input name="usuarioNuevo" type="text" placeholder="Nombre del usuario" required/>
