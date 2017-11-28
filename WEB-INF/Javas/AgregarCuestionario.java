@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Vector;
 
 @WebServlet("/AgregarCuestionario")
@@ -35,7 +38,11 @@ public class AgregarCuestionario extends HttpServlet {
             queryUsuario.first();
             int id=queryUsuario.getInt("idUsuario");
             Statement insert=con.createStatement();
-            insert.executeUpdate("INSERT into cuestionario_resuelto(idUsuario) Values('"+id+"');");
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Calendar cal = Calendar.getInstance();
+            String fechaactual=dateFormat.format(cal.getTime());
+
+            insert.executeUpdate("INSERT into cuestionario_resuelto(idUsuario, fecha) Values('"+id+"', '"+fechaactual+"');");
 
             Statement order = con.createStatement();
             ResultSet queryOrder = order.executeQuery("select idCuestionario_Resuelto from cuestionario_resuelto order by idCuestionario_Resuelto desc;");
@@ -58,12 +65,14 @@ public class AgregarCuestionario extends HttpServlet {
             request.setAttribute("user",usuario);
             request.setAttribute("password", password);
             Statement statement=con.createStatement();
-            ResultSet cuestionarios=statement.executeQuery("SELECT Nombre, idCuestionario_Resuelto FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+id+";");
+            ResultSet cuestionarios=statement.executeQuery("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+id+";");
             Vector<CuestionarioResuelto> cuestionarioResueltos=new Vector<>();
             while(cuestionarios.next()){
                 CuestionarioResuelto aux=new CuestionarioResuelto();
                 aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
                 aux.setNombreUsuario(cuestionarios.getString("Nombre"));
+                DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                aux.setFecha(dateFormat.format(cuestionarios.getTimestamp("fecha")));
                 cuestionarioResueltos.add(aux);
             }
             request.setAttribute("cuestionarios",cuestionarioResueltos);

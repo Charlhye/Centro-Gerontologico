@@ -8,7 +8,7 @@
     <link href="css/Investigador.css" rel="stylesheet"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Administrador</title>
+    <title>Agregar Cuestionario</title>
 </head>
 <body>
 <form action="AgregarCuestionario" method="post">

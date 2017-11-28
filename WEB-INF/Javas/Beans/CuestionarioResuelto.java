@@ -4,6 +4,15 @@ public class CuestionarioResuelto {
     public int idCuestionarioResuelto;
     public int idUsuario;
     public String nombreUsuario;
+    public String fecha;
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 
     public int getIdCuestionarioResuelto() {
         return idCuestionarioResuelto;

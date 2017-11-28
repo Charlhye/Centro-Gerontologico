@@ -5,6 +5,8 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Vector;
 
 @WebServlet("/Login")
@@ -53,24 +55,15 @@ public class Login extends HttpServlet{
                     disp=getServletContext().getRequestDispatcher("/Investigador.jsp");
 
                     statement2=con.createStatement();
-                    cuestionarios=statement2.executeQuery("SELECT Nombre, idCuestionario_Resuelto FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario;");
+                    cuestionarios=statement2.executeQuery("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario;");
 
-                    if(cuestionarios.first()) {
-                        while (cuestionarios.next()) {
-                            CuestionarioResuelto aux = new CuestionarioResuelto();
-                            aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
-                            aux.setNombreUsuario(cuestionarios.getString("Nombre"));
-                            cuestionarioResueltos.add(aux);
-                        }
-                    } else {
-                        Statement chance =con.createStatement();
-                        cuestionarios=chance.executeQuery("SELECT idCuestionario_Resuelto FROM cuestionario_resuelto");
-                        while (cuestionarios.next()) {
-                            CuestionarioResuelto aux = new CuestionarioResuelto();
-                            aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
-                            aux.setNombreUsuario("Ya no existe");
-                            cuestionarioResueltos.add(aux);
-                        }
+                    while (cuestionarios.next()) {
+                        CuestionarioResuelto aux = new CuestionarioResuelto();
+                        aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
+                        aux.setNombreUsuario(cuestionarios.getString("Nombre"));
+                        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        aux.setFecha(dateFormat.format(cuestionarios.getTimestamp("fecha")));
+                        cuestionarioResueltos.add(aux);
                     }
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
                     break;
@@ -80,11 +73,13 @@ public class Login extends HttpServlet{
                     disp=getServletContext().getRequestDispatcher("/Trabajador.jsp");
 
                     statement=con.createStatement();
-                    cuestionarios=statement2.executeQuery("SELECT Nombre, idCuestionario_Resuelto FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+iduser+";");
+                    cuestionarios=statement2.executeQuery("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+iduser+";");
                     while(cuestionarios.next()){
                         CuestionarioResuelto aux=new CuestionarioResuelto();
                         aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));
                         aux.setNombreUsuario(cuestionarios.getString("Nombre"));
+                        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        aux.setFecha(dateFormat.format(cuestionarios.getTimestamp("fecha")));
                         cuestionarioResueltos.add(aux);
                     }
                     for (CuestionarioResuelto it:cuestionarioResueltos

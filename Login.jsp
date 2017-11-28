@@ -12,7 +12,7 @@
         <div>
             <form action="Login" class="form-signin" method="post">
                 <div align="center"><h2 class="form-signin-heading">Iniciar sesi&oacute;n</h2></div>
-                <input name="user" type="text" id="inputUser" class="form-control" placeholder="Usuario" value="Investigador" required autofocus/>
+                <input name="user" type="text" id="inputUser" class="form-control" placeholder="Usuario"  required autofocus/>
                 <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contrase&ntilde;a" required/>
                 <div align="center"><input name="submit" type="submit" class="button"/><br/></div>
             </form>

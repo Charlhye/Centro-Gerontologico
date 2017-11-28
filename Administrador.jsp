@@ -44,16 +44,5 @@
         </form>
     </div>
 </div>
-<div class="grid-x grid-padding-x">
-    <div class="large-6 medium-6 cell">
-        <h5 align="center">Cambiar password</h5>
-        <form action="" method="post">
-            <input type="text" placeholder="Nombre del usuario"/>
-            <input type="password" placeholder="Password anterior"/>
-            <input type="password" placeholder="Password nuevo"/>
-            <div align="center"><a type="submit" class="button">Cambiar</a></div>
-        </form>
-    </div>
-</div>
 </body>
 </html>

@@ -51,10 +51,11 @@ DROP TABLE IF EXISTS `cuestionario_resuelto`;
 CREATE TABLE `cuestionario_resuelto` (
   `idCuestionario_Resuelto` int(11) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(11) DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL,
   PRIMARY KEY (`idCuestionario_Resuelto`),
   KEY `idUsuario_idx` (`idUsuario`),
   CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE SET NULL ON UPDATE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,7 +116,7 @@ CREATE TABLE `pregunta` (
 
 LOCK TABLES `pregunta` WRITE;
 /*!40000 ALTER TABLE `pregunta` DISABLE KEYS */;
-INSERT INTO `pregunta` VALUES (1,'Fecha de nacimiento',1),(2,'Años cumplidos',1),(3,'Género',1),(4,'Estado civil',1),(5,'Ocupación actual',1),(6,'Tiene servicio médico de',1),(7,'La casa donde habita es',1),(8,'¿Con quién comparte su hogar?',1),(9,'¿Alguien lo apoya económicamente?',1),(10,'¿Usted padece?',1);
+INSERT INTO `pregunta` VALUES (3,'Género',1),(4,'Estado civil',1),(5,'Ocupación actual',1),(6,'Tiene servicio médico de',1),(7,'La casa donde habita es',1),(8,'¿Con quién comparte su hogar?',1),(9,'¿Alguien lo apoya económicamente?',1),(10,'¿Usted padece?',1);
 /*!40000 ALTER TABLE `pregunta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,7 +144,7 @@ CREATE TABLE `respuesta` (
 
 LOCK TABLES `respuesta` WRITE;
 /*!40000 ALTER TABLE `respuesta` DISABLE KEYS */;
-INSERT INTO `respuesta` VALUES (1,1,'Día Mes Año',1),(2,2,'Abierta',2),(3,3,'Masculino',3),(4,3,'Casado(a)',4),(5,3,'Empleado',5),(6,3,'IMSS',6),(7,3,'Propia',7),(8,3,'Vive solo',8),(9,4,'Su pareja',9),(10,4,'Problemas del corazón',10),(11,3,'Femenino',3),(12,3,'Viudo(a)',4),(13,3,'Separado(a)',4),(14,3,'Soltero(a)',4),(15,3,'Negocio propio',5),(16,3,'Jubilado',5),(17,3,'Hogar',5),(18,3,'ISSTE',6),(19,3,'Seguro popular',6),(20,3,'ISSFAM',6),(21,3,'No tiene',6),(22,3,'Rentada',7),(23,3,'Prestada',7),(24,3,'Con pareja',8),(25,3,'Algun hijo',8),(26,3,'Sus hijos',9),(27,3,'Sus hermanos',9),(28,3,'Diabetes',10),(29,3,'Enfermedad pulmonar',10),(30,3,'Cáncer',10);
+INSERT INTO `respuesta` VALUES (3,3,'Masculino',3),(4,3,'Casado(a)',4),(5,3,'Empleado',5),(6,3,'IMSS',6),(7,3,'Propia',7),(8,3,'Vive solo',8),(9,4,'Su pareja',9),(10,4,'Problemas del corazón',10),(11,3,'Femenino',3),(12,3,'Viudo(a)',4),(13,3,'Separado(a)',4),(14,3,'Soltero(a)',4),(15,3,'Negocio propio',5),(16,3,'Jubilado',5),(17,3,'Hogar',5),(18,3,'ISSTE',6),(19,3,'Seguro popular',6),(20,3,'ISSFAM',6),(21,3,'No tiene',6),(22,3,'Rentada',7),(23,3,'Prestada',7),(24,3,'Con pareja',8),(25,3,'Algun hijo',8),(26,3,'Sus hijos',9),(27,3,'Sus hermanos',9),(28,3,'Diabetes',10),(29,3,'Enfermedad pulmonar',10),(30,3,'Cáncer',10);
 /*!40000 ALTER TABLE `respuesta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,7 +161,7 @@ CREATE TABLE `usuario` (
   `Nombre` varchar(45) NOT NULL,
   `Password` varchar(100) NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-26 20:24:11
+-- Dump completed on 2017-11-28  8:14:57
