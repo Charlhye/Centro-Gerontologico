@@ -37,13 +37,14 @@ public class Login extends HttpServlet{
                 case "Administrador":
                     request.setAttribute("user",usuario);
                     request.setAttribute("password", password);
-                    PreparedStatement usuarios=con.prepareStatement("SELECT * FROM usuario WHERE NOT Nombre=?");
+                    PreparedStatement usuarios=con.prepareStatement("SELECT * FROM usuario WHERE NOT Nombre=? AND usuario.Activo=1");
                     usuarios.setString(1,"administrador");
                     ResultSet queryUsers=usuarios.executeQuery();
                     Vector<Usuario> usuarios1=new Vector<>();
                     while (queryUsers.next()){
                         Usuario aux=new Usuario();
                         aux.setIdUsuario(queryUsers.getInt("idUsuario"));
+                        aux.setUsuario(queryUsers.getString("Usuario"));
                         aux.setNombre(queryUsers.getString("Nombre"));
                         aux.setTipoUsuario(queryUsers.getString("Tipo_Usuario"));
                         usuarios1.add(aux);

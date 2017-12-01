@@ -4,7 +4,16 @@ public class Usuario {
     public int idUsuario;
     public String tipoUsuario;
     public String Nombre;
+    public String usuario;
     public String pass;
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 
     public int getIdUsuario() {
         return idUsuario;

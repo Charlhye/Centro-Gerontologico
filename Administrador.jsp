@@ -36,7 +36,7 @@
             <input name="password" type="hidden" value="${requestScope.password}">
             <select name="usuarioABorrar">
                 <c:forEach items="${requestScope.usuarios}" var="it">
-                    <option value="${it.getNombre()}">${it.getNombre()}</option>
+                    <option value="${it.getUsuario()}">${it.getNombre()}</option>
                 </c:forEach>
             </select>
             <div align="center"><input type="submit" class="alert button"></input></div>
