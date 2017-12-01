@@ -23,12 +23,13 @@ public class Login extends HttpServlet{
 
             Connection con = DriverManager.getConnection(url, usuario, password);
 
-            Statement statement=con.createStatement();
-            ResultSet query=statement.executeQuery("SELECT * FROM usuario where Nombre='"+usuario+"';");
+            PreparedStatement statement=con.prepareStatement("SELECT * FROM usuario where Nombre=?;");
+            statement.setString(1,usuario);
+            ResultSet query=statement.executeQuery();
             query.first();
 
             Vector<CuestionarioResuelto> cuestionarioResueltos=new Vector<>();
-            Statement statement2=con.createStatement();
+            PreparedStatement statement2;
             ResultSet cuestionarios;
 
             int iduser=query.getInt("idUsuario");
@@ -36,8 +37,9 @@ public class Login extends HttpServlet{
                 case "Administrador":
                     request.setAttribute("user",usuario);
                     request.setAttribute("password", password);
-                    Statement usuarios=con.createStatement();
-                    ResultSet queryUsers=usuarios.executeQuery("SELECT * FROM usuario WHERE NOT Nombre='administrador'");
+                    PreparedStatement usuarios=con.prepareStatement("SELECT * FROM usuario WHERE NOT Nombre=?");
+                    usuarios.setString(1,"administrador");
+                    ResultSet queryUsers=usuarios.executeQuery();
                     Vector<Usuario> usuarios1=new Vector<>();
                     while (queryUsers.next()){
                         Usuario aux=new Usuario();
@@ -54,8 +56,8 @@ public class Login extends HttpServlet{
                     request.setAttribute("password", password);
                     disp=getServletContext().getRequestDispatcher("/Investigador.jsp");
 
-                    statement2=con.createStatement();
-                    cuestionarios=statement2.executeQuery("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario;");
+                    statement2=con.prepareStatement("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario;");
+                    cuestionarios=statement2.executeQuery();
 
                     while (cuestionarios.next()) {
                         CuestionarioResuelto aux = new CuestionarioResuelto();
@@ -72,8 +74,9 @@ public class Login extends HttpServlet{
                     request.setAttribute("password", password);
                     disp=getServletContext().getRequestDispatcher("/Trabajador.jsp");
 
-                    statement=con.createStatement();
-                    cuestionarios=statement2.executeQuery("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+iduser+";");
+                    statement2=con.prepareStatement("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario=?;");
+                    statement2.setInt(1,iduser);
+                    cuestionarios=statement2.executeQuery();
                     while(cuestionarios.next()){
                         CuestionarioResuelto aux=new CuestionarioResuelto();
                         aux.setIdCuestionarioResuelto(cuestionarios.getInt("idCuestionario_Resuelto"));

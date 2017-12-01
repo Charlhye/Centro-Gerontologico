@@ -30,8 +30,8 @@ public class RealizarEncuesta extends HttpServlet {
         try {
 
             Connection con = DriverManager.getConnection(url, usuario, password);
-            Statement preguntas = con.createStatement();
-            ResultSet queryPreguntas = preguntas.executeQuery("SELECT * FROM pregunta");    //Query para buscar pregunta
+            PreparedStatement preguntas = con.prepareStatement("SELECT * FROM pregunta");
+            ResultSet queryPreguntas = preguntas.executeQuery();    //Query para buscar pregunta
             Vector<Pregunta> preguntas1 = new Vector<>();
             while(queryPreguntas.next()){
                 Pregunta pregunta = new Pregunta();
@@ -40,8 +40,8 @@ public class RealizarEncuesta extends HttpServlet {
                 preguntas1.add(pregunta);
 
             }
-            Statement respuestas = con.createStatement();//por cada pregunta query para buscar respuestas de pregunta
-            ResultSet queryRespuestas = respuestas.executeQuery(" SELECT Titulo,Descripcion FROM respuesta join pregunta WHERE respuesta.idPregunta = pregunta.idPregunta ");
+            PreparedStatement respuestas = con.prepareStatement("SELECT Titulo,Descripcion FROM respuesta join pregunta WHERE respuesta.idPregunta = pregunta.idPregunta");//por cada pregunta query para buscar respuestas de pregunta
+            ResultSet queryRespuestas = respuestas.executeQuery();
             while(queryRespuestas.next()){
                 for (Pregunta aux:preguntas1) {
                     if(aux.getTitulo().equals(queryRespuestas.getString("Titulo"))){

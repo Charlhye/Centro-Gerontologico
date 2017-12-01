@@ -29,12 +29,14 @@ public class VerCuestionario extends HttpServlet {
 
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
-            Statement respuestas=con.createStatement();
-            ResultSet queryRespuestas=respuestas.executeQuery("SELECT * FROM cuestionario_resuelto join cuestionario_resuelto_respuesta where cuestionario_resuelto.idCuestionario_Resuelto=cuestionario_resuelto_respuesta.idCuestionarioR and cuestionario_resuelto.idCuestionario_Resuelto="+idCuestionarioR+";");
+            PreparedStatement respuestas=con.prepareStatement("SELECT * FROM cuestionario_resuelto join cuestionario_resuelto_respuesta where cuestionario_resuelto.idCuestionario_Resuelto=cuestionario_resuelto_respuesta.idCuestionarioR and cuestionario_resuelto.idCuestionario_Resuelto=?;");
+            respuestas.setInt(1,idCuestionarioR);
+            ResultSet queryRespuestas=respuestas.executeQuery();
             Vector <Pregunta> preguntasVector = new Vector<>();
             while(queryRespuestas.next()){
-                Statement preguntas=con.createStatement();
-                ResultSet queryPreguntas=preguntas.executeQuery("select * from pregunta join respuesta where pregunta.idPregunta=respuesta.idPregunta and idRespuesta="+queryRespuestas.getInt("idRespuesta")+";");
+                PreparedStatement preguntas=con.prepareStatement("select * from pregunta join respuesta where pregunta.idPregunta=respuesta.idPregunta and idRespuesta=?;");
+                preguntas.setInt(1,queryRespuestas.getInt("idRespuesta"));
+                ResultSet queryPreguntas=preguntas.executeQuery();
                 queryPreguntas.first();
                 Pregunta auxPreg=new Pregunta();
                 auxPreg.setTitulo(queryPreguntas.getString("Titulo"));

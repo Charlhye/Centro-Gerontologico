@@ -31,9 +31,10 @@ public class AltaUsuario extends HttpServlet{
             insert.setString(1,ocupacion);
             insert.setString(2,usuarioNuevo);
             insert.executeUpdate();
-            PreparedStatement addUser=con.prepareStatement("GRANT SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON centrogerontologico.* TO ?@'localhost' IDENTIFIED BY ?;");
+            PreparedStatement addUser=con.prepareStatement("GRANT SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON centrogerontologico.* TO ?@? IDENTIFIED BY ?;");
             addUser.setString(1,usuarioNuevo);
-            addUser.setString(2,passNuevo);
+            addUser.setString(2,"localhost");
+            addUser.setString(3,passNuevo);
             addUser.executeUpdate();
 
 

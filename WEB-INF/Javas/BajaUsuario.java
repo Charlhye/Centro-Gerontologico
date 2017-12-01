@@ -27,10 +27,13 @@ public class BajaUsuario extends HttpServlet {
 
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
-            Statement tabla=con.createStatement();
-            tabla.executeUpdate("DROP USER '"+usuarioABorrar+"'@'localhost';");
-            Statement usuarios=con.createStatement();
-            ResultSet queryUsers=usuarios.executeQuery("SELECT * FROM usuario WHERE NOT Nombre='administrador'");
+            PreparedStatement tabla=con.prepareStatement("DROP USER ?@?;");
+            tabla.setString(1,usuarioABorrar);
+            tabla.setString(1,"localhost");
+            tabla.executeUpdate();
+            PreparedStatement usuarios=con.prepareStatement("SELECT * FROM usuario WHERE NOT Nombre=?");
+            usuarios.setString(1,"administrador");
+            ResultSet queryUsers=usuarios.executeQuery();
             Vector<Usuario> usuarios1=new Vector<>();
             while (queryUsers.next()){
                 Usuario aux=new Usuario();
