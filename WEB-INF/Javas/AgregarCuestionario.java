@@ -67,8 +67,12 @@ public class AgregarCuestionario extends HttpServlet {
                 insert2.executeUpdate();
 
             }
-
+            PreparedStatement nombreUsuario = con.prepareStatement("SELECT Nombre FROM usuario WHERE Usuario=?;");
+            nombreUsuario.setString(1,usuario);
+            ResultSet queryNombre = nombreUsuario.executeQuery();
+            queryNombre.first();
             request.setAttribute("user",usuario);
+            request.setAttribute("nombreCompleto",queryNombre.getString("Nombre"));
             request.setAttribute("password", password);
             PreparedStatement statement=con.prepareStatement("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario=?;");
             statement.setInt(1, id);

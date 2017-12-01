@@ -53,7 +53,12 @@ public class Login extends HttpServlet{
                     disp=getServletContext().getRequestDispatcher("/Administrador.jsp");
                     break;
                 case "Investigador" :
+                    PreparedStatement nombreUsuario = con.prepareStatement("SELECT Nombre FROM usuario WHERE Usuario=?;");
+                    nombreUsuario.setString(1,usuario);
+                    ResultSet queryNombre = nombreUsuario.executeQuery();
+                    queryNombre.first();
                     request.setAttribute("user",usuario);
+                    request.setAttribute("nombreCompleto",queryNombre.getString("Nombre"));
                     request.setAttribute("password", password);
                     disp=getServletContext().getRequestDispatcher("/Investigador.jsp");
 
@@ -71,7 +76,12 @@ public class Login extends HttpServlet{
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
                     break;
                 case "Trabajador" :
+                    PreparedStatement nombreUsuario2 = con.prepareStatement("SELECT Nombre FROM usuario WHERE Usuario=?;");
+                    nombreUsuario2.setString(1,usuario);
+                    ResultSet queryNombre2 = nombreUsuario2.executeQuery();
+                    queryNombre2.first();
                     request.setAttribute("user",usuario);
+                    request.setAttribute("nombreCompleto",queryNombre2.getString("Nombre"));
                     request.setAttribute("password", password);
                     disp=getServletContext().getRequestDispatcher("/Trabajador.jsp");
 

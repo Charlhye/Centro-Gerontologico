@@ -19,8 +19,10 @@
             <input name="user" type="hidden" value="${requestScope.user}"/>
 
             <input name="password" type="hidden" value="${requestScope.password}">
-            <input name="usuarioNuevo" type="text" placeholder="Nombre del usuario" required/>
+            <input name="nombreCompleto" type="text" placeholder="Nombre Completo" required/>
+            <input name="usuarioNuevo" type="text" placeholder="Nombre de Usuario" required/>
             <input name="passNuevo" type="password" placeholder="Nuevo password" required/>
+
             <select name="ocupacion" required>
                 <option value="Investigador">Investigador</option>
                 <option value="Trabajador">Trabajador</option>
