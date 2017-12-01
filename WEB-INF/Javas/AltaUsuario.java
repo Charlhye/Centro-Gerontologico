@@ -15,6 +15,7 @@ public class AltaUsuario extends HttpServlet{
         String password = request.getParameter("password");
 
         String usuarioNuevo = request.getParameter("usuarioNuevo");
+        String nombreCompleto = request.getParameter("nombreCompleto");
         String passNuevo= request.getParameter("passNuevo");
         String ocupacion = request.getParameter("ocupacion");
 
@@ -27,9 +28,10 @@ public class AltaUsuario extends HttpServlet{
 
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
-            PreparedStatement insert=con.prepareStatement("INSERT into usuario(Tipo_Usuario, Nombre) Values(?, ?);");
+            PreparedStatement insert=con.prepareStatement("INSERT into usuario(Tipo_Usuario, Nombre,Usuario) Values(?, ?,?);");
             insert.setString(1,ocupacion);
-            insert.setString(2,usuarioNuevo);
+            insert.setString(2,nombreCompleto);
+            insert.setString(3,usuarioNuevo);
             insert.executeUpdate();
             PreparedStatement addUser=con.prepareStatement("GRANT SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON centrogerontologico.* TO ?@? IDENTIFIED BY ?;");
             addUser.setString(1,usuarioNuevo);
