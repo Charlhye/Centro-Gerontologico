@@ -36,6 +36,7 @@ public class RealizarEncuesta extends HttpServlet {
             while(queryPreguntas.next()){
                 Pregunta pregunta = new Pregunta();
                 pregunta.setTitulo(queryPreguntas.getString("Titulo"));
+                pregunta.setIdPregunta(queryPreguntas.getInt("idPregunta"));
                 pregunta.setRespuestas(new Vector<>());
                 preguntas1.add(pregunta);
 

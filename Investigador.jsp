@@ -19,7 +19,29 @@
     <h1 align="center">Bienvenido ${requestScope.nombreCompleto}</h1>
 </header>
 <body>
-<table style="width:100% ">
+<div class="grid-x grid-padding-x">
+    <div align="center" class="large-6 medium-6 cell">
+        <form action="AgregarCuestionarioVacio" method="post" target="_blank">
+            <input name="user" type="hidden" value="${requestScope.user}"/>
+            <input name="password" type="hidden" value="${requestScope.password}">
+            <input name="nombreCuestionario" type="text" placeholder="Nombre del Cuestionario" required>
+            <input type="submit" class="success button" value="Agregar Cuestionario">
+        </form>
+    </div>
+    <div align="center" class="large-6 medium-6 cell">
+        <form action="AgregarPregunta" method="post" target="_blank">
+            <input name="user" type="hidden" value="${requestScope.user}"/>
+            <input name="password" type="hidden" value="${requestScope.password}">
+            <select name="Cuestionario">
+                <c:forEach items="${requestScope.cuestionariosVacios}" var="it">
+                    <option value="${it.idCuestionario}">${it.nombre}</option>
+                </c:forEach>
+            </select>
+            <input type="submit" class="success button" value="Agregar Pregunta">
+        </form>
+    </div>
+</div>
+<table style="width:100%">
     <tr>
         <th></th>
         <th>Id del Cuestionario</th>

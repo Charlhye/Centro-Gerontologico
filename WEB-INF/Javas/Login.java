@@ -74,6 +74,18 @@ public class Login extends HttpServlet{
                         cuestionarioResueltos.add(aux);
                     }
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
+
+                    PreparedStatement cuestionariosVacios = con.prepareStatement("SELECT * FROM cuestionario");
+                    ResultSet queryCuestionariosVacios = cuestionariosVacios.executeQuery();
+
+                    Vector<Cuestionario> cuestionarios1 = new Vector<>();
+                    while (queryCuestionariosVacios.next()){
+                        Cuestionario aux = new Cuestionario();
+                        aux.idCuestionario = queryCuestionariosVacios.getInt("idCuestionario");
+                        aux.nombre = queryCuestionariosVacios.getString("Nombre");
+                        cuestionarios1.add(aux);
+                    }
+                    request.setAttribute("cuestionariosVacios", cuestionarios1);
                     break;
                 case "Trabajador" :
                     PreparedStatement nombreUsuario2 = con.prepareStatement("SELECT Nombre FROM usuario WHERE Usuario=?;");
