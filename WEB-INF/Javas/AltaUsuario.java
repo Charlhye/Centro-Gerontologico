@@ -27,15 +27,19 @@ public class AltaUsuario extends HttpServlet{
 
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
-            Statement insert=con.createStatement();
-            insert.executeUpdate("INSERT into usuario(Tipo_Usuario, Nombre, Password) Values('"+ocupacion+"', '"+usuarioNuevo+"', '"+passNuevo+"');");
-            Statement addUser=con.createStatement();
-            System.out.println("CREATE USER '"+usuarioNuevo+"'@'localhost' IDENTIFIED BY '"+passNuevo+"'; GRANT SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON centrogerontologico.* TO '"+usuarioNuevo+"'@'localhost';");
-            addUser.executeUpdate("GRANT SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON centrogerontologico.* TO '"+usuarioNuevo+"'@'localhost' IDENTIFIED BY '"+passNuevo+"';");
+            PreparedStatement insert=con.prepareStatement("INSERT into usuario(Tipo_Usuario, Nombre) Values(?, ?);");
+            insert.setString(1,ocupacion);
+            insert.setString(2,usuarioNuevo);
+            insert.executeUpdate();
+            PreparedStatement addUser=con.prepareStatement("GRANT SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON centrogerontologico.* TO ?@'localhost' IDENTIFIED BY ?;");
+            addUser.setString(1,usuarioNuevo);
+            addUser.setString(2,passNuevo);
+            addUser.executeUpdate();
 
 
-            Statement usuarios=con.createStatement();
-            ResultSet queryUsers=usuarios.executeQuery("SELECT * FROM usuario WHERE NOT Nombre='administrador'");
+            PreparedStatement usuarios=con.prepareStatement("SELECT * FROM usuario WHERE NOT Nombre=?");
+            usuarios.setString(1,"administrador");
+            ResultSet queryUsers=usuarios.executeQuery();
             Vector<Usuario> usuarios1=new Vector<>();
             while (queryUsers.next()){
                 Usuario aux=new Usuario();

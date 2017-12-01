@@ -33,39 +33,46 @@ public class AgregarCuestionario extends HttpServlet {
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
 
-            Statement usuario1 = con.createStatement();
-            ResultSet queryUsuario = usuario1.executeQuery("SELECT idUsuario FROM usuario WHERE  nombre='"+usuario+"'");
+            PreparedStatement usuario1 = con.prepareStatement("SELECT idUsuario FROM usuario WHERE  nombre=?");
+            usuario1.setString(1, usuario);
+            ResultSet queryUsuario = usuario1.executeQuery();
             queryUsuario.first();
             int id=queryUsuario.getInt("idUsuario");
-            Statement insert=con.createStatement();
+
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Calendar cal = Calendar.getInstance();
             String fechaactual=dateFormat.format(cal.getTime());
 
-            insert.executeUpdate("INSERT into cuestionario_resuelto(idUsuario, fecha) Values('"+id+"', '"+fechaactual+"');");
+            PreparedStatement insert=con.prepareStatement("INSERT into cuestionario_resuelto(idUsuario, fecha) Values(?, ?);");
+            insert.setInt(1, id);
+            insert.setString(2,fechaactual);
+            insert.executeUpdate();
 
-            Statement order = con.createStatement();
-            ResultSet queryOrder = order.executeQuery("select idCuestionario_Resuelto from cuestionario_resuelto order by idCuestionario_Resuelto desc;");
+            PreparedStatement order = con.prepareStatement("select idCuestionario_Resuelto from cuestionario_resuelto order by idCuestionario_Resuelto desc;");
+            ResultSet queryOrder = order.executeQuery();
             queryOrder.first();
             int idLast=queryOrder.getInt("idCuestionario_Resuelto");
 
-            Statement preguntas = con.createStatement();
-            ResultSet queryPreguntas = preguntas.executeQuery("SELECT * FROM pregunta");    //Query para buscar pregunta
+            PreparedStatement preguntas = con.prepareStatement("SELECT * FROM pregunta");
+            ResultSet queryPreguntas = preguntas.executeQuery();    //Query para buscar pregunta
             while(queryPreguntas.next()){
                 String resp=request.getParameter(queryPreguntas.getString("Titulo"));
-                Statement aux = con.createStatement();
-                System.out.println(resp);
-                ResultSet queryId = aux.executeQuery("SELECT idRespuesta FROM respuesta WHERE descripcion='"+resp+"'");
+                PreparedStatement aux = con.prepareStatement("SELECT idRespuesta FROM respuesta WHERE descripcion=?");
+                aux.setString(1,resp);
+                ResultSet queryId = aux.executeQuery();
                 queryId.first();
-                Statement insert2=con.createStatement();
-                insert2.executeUpdate("INSERT into cuestionario_resuelto_respuesta(idCuestionarioR,idRespuesta) Values('"+idLast+"','"+queryId.getInt("idRespuesta")+"')");
+                PreparedStatement insert2=con.prepareStatement("INSERT into cuestionario_resuelto_respuesta(idCuestionarioR,idRespuesta) Values(?,?)");
+                insert2.setInt(1,idLast);
+                insert2.setInt(2, queryId.getInt("idRespuesta"));
+                insert2.executeUpdate();
 
             }
 
             request.setAttribute("user",usuario);
             request.setAttribute("password", password);
-            Statement statement=con.createStatement();
-            ResultSet cuestionarios=statement.executeQuery("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario="+id+";");
+            PreparedStatement statement=con.prepareStatement("SELECT * FROM usuario join cuestionario_resuelto where usuario.idUsuario=cuestionario_resuelto.idUsuario AND usuario.idUsuario=?;");
+            statement.setInt(1, id);
+            ResultSet cuestionarios=statement.executeQuery();
             Vector<CuestionarioResuelto> cuestionarioResueltos=new Vector<>();
             while(cuestionarios.next()){
                 CuestionarioResuelto aux=new CuestionarioResuelto();
