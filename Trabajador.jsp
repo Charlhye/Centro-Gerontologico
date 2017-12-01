@@ -15,7 +15,7 @@
     }
 </script>
 <header>
-    <h1 align="center">Bienvenido ${requestScope.user}</h1>
+    <h1 align="center">Bienvenido ${requestScope.nombreCompleto}</h1>
 </header>
 <body>
 <div class="wrapper">

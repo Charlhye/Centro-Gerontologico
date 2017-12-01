@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abef45df-8ce6-4344-be34-de356fbbe826" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/classes/CambiarPassword.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/Javas/CambiarPassword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/classes/AgregarCuestionario.class" afterPath="$PROJECT_DIR$/WEB-INF/classes/AgregarCuestionario.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/classes/AltaUsuario.class" afterPath="$PROJECT_DIR$/WEB-INF/classes/AltaUsuario.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/classes/Login.class" afterPath="$PROJECT_DIR$/WEB-INF/classes/Login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Administrador.jsp" afterPath="$PROJECT_DIR$/Administrador.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Investigador.jsp" afterPath="$PROJECT_DIR$/Investigador.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trabajador.jsp" afterPath="$PROJECT_DIR$/Trabajador.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java" afterPath="$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java" afterPath="$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/Javas/Login.java" afterPath="$PROJECT_DIR$/WEB-INF/Javas/Login.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,12 +29,9 @@
       <file leaf-file-name="Login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="294">
               <caret line="14" column="105" lean-forward="false" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
-              <folding>
-                <marker date="1512093647447" expanded="true" signature="1025:1123" ph="..." />
-                <marker date="1512093647447" expanded="false" signature="1061:1070" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,55 +39,25 @@
       <file leaf-file-name="Administrador.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Administrador.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="22" column="81" lean-forward="false" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="81" />
-              <folding />
+            <state relative-caret-position="504">
+              <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="68" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1512105127379" expanded="false" signature="1380:1389" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BajaUsuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/BajaUsuario.java">
+      <file leaf-file-name="CambiarPassword.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/CambiarPassword.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="337">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AltaUsuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-              <folding>
-                <marker date="1512102239959" expanded="true" signature="1167:1231" ph="INSERT into usuario... " />
-                <marker date="1512102239959" expanded="true" signature="1469:1561" ph="GRANT SELECT... " />
-                <marker date="1512102239959" expanded="true" signature="1803:1864" ph="SELECT * FRO... usuario" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Beans/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-              <folding>
-                <marker date="1512099505847" expanded="false" signature="351:362" ph=" { " />
-                <marker date="1512099505847" expanded="false" signature="379:385" ph=" }" />
-                <marker date="1512099505847" expanded="false" signature="430:441" ph=" { " />
-                <marker date="1512099505847" expanded="false" signature="468:474" ph=" }" />
-                <marker date="1512099505847" expanded="false" signature="510:521" ph=" { " />
-                <marker date="1512099505847" expanded="false" signature="540:546" ph=" }" />
-                <marker date="1512099505847" expanded="false" signature="598:609" ph=" { " />
-                <marker date="1512099505847" expanded="false" signature="640:646" ph=" }" />
-                <marker date="1512099505847" expanded="false" signature="677:688" ph=" { " />
-                <marker date="1512099505847" expanded="false" signature="702:708" ph=" }" />
+                <marker date="1512108646583" expanded="true" signature="2200:2261" ph="SELECT * FRO... usuario" />
               </folding>
             </state>
           </provider>
@@ -92,9 +66,49 @@
       <file leaf-file-name="Investigador.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Investigador.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            <state relative-caret-position="234">
+              <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AltaUsuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding>
+                <marker date="1512105120682" expanded="true" signature="1167:1231" ph="INSERT into usuario... " />
+                <marker date="1512105120682" expanded="true" signature="1469:1542" ph="GRANT SELECT... " />
+                <marker date="1512105120682" expanded="true" signature="1469:1560" ph="GRANT SELECT... " />
+                <marker date="1512105120682" expanded="true" signature="1469:1561" ph="GRANT SELECT... " />
+                <marker date="1512105120682" expanded="true" signature="1803:1864" ph="SELECT * FRO... usuario" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trabajador.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trabajador.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Beans/Usuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,35 +116,60 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="60" column="91" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="91" />
+            <state relative-caret-position="420">
+              <caret line="51" column="63" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="51" selection-end-column="63" />
               <folding>
-                <marker date="1512103205327" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
-                <marker date="1512103205327" expanded="true" signature="1562:1623" ph="SELECT * FRO... usuario" />
-                <marker date="1512103205327" expanded="true" signature="2572:2613" ph="SELECT Nombr... usuario" />
-                <marker date="1512103205327" expanded="true" signature="2572:2614" ph="SELECT Nombr... usuario" />
-                <marker date="1512103205327" expanded="true" signature="3146:3250" ph="SELECT * FRO... usuario" />
-                <marker date="1512103205327" expanded="true" signature="4118:4160" ph="SELECT Nombr... usuario" />
-                <marker date="1512103205327" expanded="true" signature="4695:4823" ph="SELECT * FRO... usuario" />
+                <element signature="imports" expanded="true" />
+                <marker date="1512105436830" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
+                <marker date="1512105436830" expanded="true" signature="903:940" ph="SELECT * FRO... usuario" />
+                <marker date="1512105436830" expanded="true" signature="1563:1624" ph="SELECT * FRO... usuario" />
+                <marker date="1512105436830" expanded="true" signature="2573:2615" ph="SELECT Nombr... usuario" />
+                <marker date="1512105436830" expanded="true" signature="3147:3251" ph="SELECT * FRO... usuario" />
+                <marker date="1512105436830" expanded="true" signature="4119:4161" ph="SELECT Nombr... usuario" />
+                <marker date="1512105436830" expanded="true" signature="4696:4823" ph="SELECT * FRO... usuario" />
+                <marker date="1512105436830" expanded="true" signature="4696:4824" ph="SELECT * FRO... usuario" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgregarCuestionario.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RealizarEncuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/RealizarEncuesta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="63" selection-end-column="13" />
+              <folding>
+                <marker date="1512094617456" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
+                <marker date="1512094617456" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgregarCuestionario.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="74" column="83" lean-forward="false" selection-start-line="74" selection-start-column="83" selection-end-line="74" selection-end-column="83" />
+            <state relative-caret-position="819">
+              <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
               <folding>
-                <marker date="1512103790324" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
-                <marker date="1512103790324" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
-                <marker date="1512103790324" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
-                <marker date="1512103790324" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
-                <marker date="1512103790324" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
-                <marker date="1512103790324" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
-                <marker date="1512103790324" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
-                <marker date="1512103790324" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
+                <element signature="imports" expanded="true" />
+                <marker date="1512105783267" expanded="true" signature="1236:1280" ph="SELECT idUsu... usuario" />
+                <marker date="1512105783267" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
+                <marker date="1512105783267" expanded="true" signature="1388:1389" ph="SELECT idUsu... usuario" />
+                <marker date="1512105783267" expanded="true" signature="1736:1795" ph="INSERT into cuestionario_resuelto... " />
+                <marker date="1512105783267" expanded="true" signature="1736:1798" ph="INSERT into cuestionario_resuelto... " />
+                <marker date="1512105783267" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
+                <marker date="1512105783267" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
+                <marker date="1512105783267" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
+                <marker date="1512105783267" expanded="true" signature="2617:2669" ph="SELECT idRes... respuesta" />
+                <marker date="1512105783267" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
+                <marker date="1512105783267" expanded="true" signature="2866:2946" ph="INSERT into cuestionario_resuelto_respuesta... " />
+                <marker date="1512105783267" expanded="true" signature="2866:2948" ph="INSERT into cuestionario_resuelto_respuesta... " />
+                <marker date="1512105783267" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
+                <marker date="1512105783267" expanded="true" signature="2866:2994" ph="INSERT into cuestionario_resuelto_respuesta... " />
+                <marker date="1512105783267" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
+                <marker date="1512105783267" expanded="true" signature="3632:3759" ph="SELECT * FRO... usuario" />
+                <marker date="1512105783267" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
               </folding>
             </state>
           </provider>
@@ -165,9 +204,7 @@
         <option value="$PROJECT_DIR$/WEB-INF/Javas/Beans/Respuesta.java" />
         <option value="$PROJECT_DIR$/RespuestasCuestionario.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/Javas/Beans/CuestionarioResuelto.java" />
-        <option value="$PROJECT_DIR$/Investigador.jsp" />
         <option value="$PROJECT_DIR$/Cuestionarios.jsp" />
-        <option value="$PROJECT_DIR$/Trabajador.jsp" />
         <option value="$PROJECT_DIR$/Login.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/Javas/RealizarEncuesta.java" />
         <option value="$PROJECT_DIR$/WEB-INF/Javas/VerCuestionario.java" />
@@ -176,7 +213,10 @@
         <option value="$PROJECT_DIR$/Administrador.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java" />
         <option value="$PROJECT_DIR$/WEB-INF/Javas/Login.java" />
+        <option value="$PROJECT_DIR$/Investigador.jsp" />
+        <option value="$PROJECT_DIR$/Trabajador.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java" />
+        <option value="$PROJECT_DIR$/WEB-INF/Javas/CambiarPassword.java" />
       </list>
     </option>
   </component>
@@ -207,9 +247,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Centro-Gerontologico" type="cbb8eebc:String" user="Centro-Gerontologico" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Centro-Gerontologico" type="cbb8eebc:String" user="Centro-Gerontologico" />
+              <item name="WEB-INF" type="cbb8eebc:String" user="WEB-INF" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Centro-Gerontologico" type="cbb8eebc:String" user="Centro-Gerontologico" />
+              <item name="WEB-INF" type="cbb8eebc:String" user="WEB-INF" />
+              <item name="Javas" type="cbb8eebc:String" user="Javas" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,28 +306,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Centro-Gerontologico" type="cbb8eebc:String" user="Centro-Gerontologico" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Centro-Gerontologico" type="cbb8eebc:String" user="Centro-Gerontologico" />
-              <item name="WEB-INF" type="cbb8eebc:String" user="WEB-INF" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Centro-Gerontologico" type="cbb8eebc:String" user="Centro-Gerontologico" />
-              <item name="WEB-INF" type="cbb8eebc:String" user="WEB-INF" />
-              <item name="Javas" type="cbb8eebc:String" user="Javas" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,6 +327,120 @@
       <recent name="C:\Users\Charlhye\Documents\ITESM\5. Quinto\AMSS\Proyecto final\Sistema\CentroGerontologico\WEB-INF\classes" />
       <recent name="C:\Users\Charlhye\Documents\ITESM\5. Quinto\AMSS\Proyecto final\Sistema\CentroGerontologico\WEB-INF\Javas" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Administrador.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/WEB-INF/Javas/Login.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -431,14 +585,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59957000" />
+    <option name="totallyTimeSpent" value="64013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="823" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1608" y="54" width="1616" height="886" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -450,9 +604,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -460,12 +615,33 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,21 +666,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Beans/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <marker date="1512093647447" expanded="true" signature="1025:1123" ph="..." />
-            <marker date="1512093647447" expanded="false" signature="1061:1070" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +686,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="90" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512105127379" expanded="false" signature="1380:1389" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -530,6 +700,10 @@
           <caret line="28" column="81" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="28" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1512099010518" expanded="true" signature="1348:1391" ph="UPDATE usuar... " />
+            <marker date="1512099010518" expanded="true" signature="1560:1604" ph="SELECT * FRO... usuario" />
+            <marker date="1512099010518" expanded="true" signature="1560:1612" ph="SELECT * FRO... usuario" />
+            <marker date="1512099010518" expanded="true" signature="1560:1621" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -561,8 +735,8 @@
         <state relative-caret-position="547">
           <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
-            <marker date="1512099505849" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
-            <marker date="1512099505849" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
+            <marker date="1512094617456" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
+            <marker date="1512094617456" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
           </folding>
         </state>
       </provider>
@@ -572,14 +746,24 @@
         <state relative-caret-position="252">
           <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
           <folding>
-            <marker date="1512103790324" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
-            <marker date="1512103790324" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
-            <marker date="1512103790324" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
-            <marker date="1512103790324" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
-            <marker date="1512103790324" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
-            <marker date="1512103790324" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
-            <marker date="1512103790324" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
-            <marker date="1512103790324" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105783267" expanded="true" signature="1236:1280" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1388:1389" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1736:1795" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1736:1798" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
+            <marker date="1512105783267" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
+            <marker date="1512105783267" expanded="true" signature="2617:2669" ph="SELECT idRes... respuesta" />
+            <marker date="1512105783267" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
+            <marker date="1512105783267" expanded="true" signature="2866:2946" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2948" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2994" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
+            <marker date="1512105783267" expanded="true" signature="3632:3759" ph="SELECT * FRO... usuario" />
+            <marker date="1512105783267" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -625,7 +809,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512105127379" expanded="false" signature="1380:1389" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -670,8 +858,8 @@
         <state relative-caret-position="360">
           <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
-            <marker date="1512099505849" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
-            <marker date="1512099505849" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
+            <marker date="1512094617456" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
+            <marker date="1512094617456" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
           </folding>
         </state>
       </provider>
@@ -681,14 +869,24 @@
         <state relative-caret-position="90">
           <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
           <folding>
-            <marker date="1512103790324" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
-            <marker date="1512103790324" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
-            <marker date="1512103790324" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
-            <marker date="1512103790324" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
-            <marker date="1512103790324" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
-            <marker date="1512103790324" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
-            <marker date="1512103790324" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
-            <marker date="1512103790324" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105783267" expanded="true" signature="1236:1280" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1388:1389" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1736:1795" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1736:1798" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
+            <marker date="1512105783267" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
+            <marker date="1512105783267" expanded="true" signature="2617:2669" ph="SELECT idRes... respuesta" />
+            <marker date="1512105783267" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
+            <marker date="1512105783267" expanded="true" signature="2866:2946" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2948" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2994" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
+            <marker date="1512105783267" expanded="true" signature="3632:3759" ph="SELECT * FRO... usuario" />
+            <marker date="1512105783267" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -697,10 +895,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1512093647447" expanded="true" signature="1025:1123" ph="..." />
-            <marker date="1512093647447" expanded="false" signature="1061:1070" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,13 +912,15 @@
         <state relative-caret-position="336">
           <caret line="16" column="63" lean-forward="true" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
           <folding>
-            <marker date="1512103205327" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="1562:1623" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2613" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2614" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="3146:3250" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4118:4160" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4695:4823" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105436830" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="903:940" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="1563:1624" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="2573:2615" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="3147:3251" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4119:4161" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4823" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4824" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -732,10 +929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1512093647447" expanded="true" signature="1025:1123" ph="..." />
-            <marker date="1512093647447" expanded="false" signature="1061:1070" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,13 +946,15 @@
         <state relative-caret-position="147">
           <caret line="11" column="70" lean-forward="false" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
           <folding>
-            <marker date="1512103205327" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="1562:1623" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2613" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2614" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="3146:3250" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4118:4160" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4695:4823" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105436830" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="903:940" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="1563:1624" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="2573:2615" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="3147:3251" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4119:4161" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4823" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4824" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -767,10 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1512093647447" expanded="true" signature="1025:1123" ph="..." />
-            <marker date="1512093647447" expanded="false" signature="1061:1070" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -787,13 +980,15 @@
         <state relative-caret-position="441">
           <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding>
-            <marker date="1512103205327" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="1562:1623" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2613" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2614" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="3146:3250" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4118:4160" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4695:4823" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105436830" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="903:940" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="1563:1624" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="2573:2615" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="3147:3251" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4119:4161" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4823" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4824" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
@@ -863,14 +1058,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RespuestasCuestionario.jsp" />
-    <entry file="file://$PROJECT_DIR$/Trabajador.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cuestionarios.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -879,115 +1066,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login.jsp">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/VerCuestionario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="105" lean-forward="false" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
+        <state relative-caret-position="840">
+          <caret line="51" column="63" lean-forward="true" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
           <folding>
-            <marker date="1512093647447" expanded="true" signature="1025:1123" ph="..." />
-            <marker date="1512093647447" expanded="false" signature="1061:1070" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/VerCuestionario.java" />
-    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Beans/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <marker date="1512099505847" expanded="false" signature="351:362" ph=" { " />
-            <marker date="1512099505847" expanded="false" signature="379:385" ph=" }" />
-            <marker date="1512099505847" expanded="false" signature="430:441" ph=" { " />
-            <marker date="1512099505847" expanded="false" signature="468:474" ph=" }" />
-            <marker date="1512099505847" expanded="false" signature="510:521" ph=" { " />
-            <marker date="1512099505847" expanded="false" signature="540:546" ph=" }" />
-            <marker date="1512099505847" expanded="false" signature="598:609" ph=" { " />
-            <marker date="1512099505847" expanded="false" signature="640:646" ph=" }" />
-            <marker date="1512099505847" expanded="false" signature="677:688" ph=" { " />
-            <marker date="1512099505847" expanded="false" signature="702:708" ph=" }" />
+            <marker date="1512094617546" expanded="true" signature="1183:1406" ph="SELECT * FRO... cuestionario_resuelto" />
+            <marker date="1512094617546" expanded="true" signature="1183:1407" ph="SELECT * FRO... cuestionario_resuelto" />
+            <marker date="1512094617546" expanded="true" signature="1700:1801" ph="select * fro... pregunta" />
+            <marker date="1512094617546" expanded="true" signature="1700:1802" ph="select * fro... pregunta" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/BajaUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="28" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1512099010518" expanded="true" signature="1348:1391" ph="UPDATE usuar... " />
+            <marker date="1512099010518" expanded="true" signature="1560:1604" ph="SELECT * FRO... usuario" />
+            <marker date="1512099010518" expanded="true" signature="1560:1612" ph="SELECT * FRO... usuario" />
+            <marker date="1512099010518" expanded="true" signature="1560:1621" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Administrador.jsp">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Beans/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="22" column="81" lean-forward="false" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="81" />
-          <folding />
+        <state relative-caret-position="189">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Investigador.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="234">
+          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/RealizarEncuesta.java">
+    <entry file="file://$PROJECT_DIR$/Trabajador.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="49" />
+        <state relative-caret-position="232">
+          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="105" lean-forward="false" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
           <folding>
-            <marker date="1512099505849" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
-            <marker date="1512099505849" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105783267" expanded="true" signature="1236:1280" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1388:1389" ph="SELECT idUsu... usuario" />
+            <marker date="1512105783267" expanded="true" signature="1736:1795" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1736:1798" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
+            <marker date="1512105783267" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
+            <marker date="1512105783267" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
+            <marker date="1512105783267" expanded="true" signature="2617:2669" ph="SELECT idRes... respuesta" />
+            <marker date="1512105783267" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
+            <marker date="1512105783267" expanded="true" signature="2866:2946" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2948" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="2866:2994" ph="INSERT into cuestionario_resuelto_respuesta... " />
+            <marker date="1512105783267" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
+            <marker date="1512105783267" expanded="true" signature="3632:3759" ph="SELECT * FRO... usuario" />
+            <marker date="1512105783267" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/AltaUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state relative-caret-position="168">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
           <folding>
-            <marker date="1512102239959" expanded="true" signature="1167:1231" ph="INSERT into usuario... " />
-            <marker date="1512102239959" expanded="true" signature="1469:1561" ph="GRANT SELECT... " />
-            <marker date="1512102239959" expanded="true" signature="1803:1864" ph="SELECT * FRO... usuario" />
+            <marker date="1512105120682" expanded="true" signature="1167:1231" ph="INSERT into usuario... " />
+            <marker date="1512105120682" expanded="true" signature="1469:1542" ph="GRANT SELECT... " />
+            <marker date="1512105120682" expanded="true" signature="1469:1560" ph="GRANT SELECT... " />
+            <marker date="1512105120682" expanded="true" signature="1469:1561" ph="GRANT SELECT... " />
+            <marker date="1512105120682" expanded="true" signature="1803:1864" ph="SELECT * FRO... usuario" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/RealizarEncuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="63" selection-end-column="13" />
+          <folding>
+            <marker date="1512094617456" expanded="true" signature="1106:1128" ph="SELECT * FRO... pregunta" />
+            <marker date="1512094617456" expanded="true" signature="1631:1734" ph="SELECT Titul... respuesta" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrador.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512105127379" expanded="false" signature="1380:1389" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="60" column="91" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="91" />
+        <state relative-caret-position="420">
+          <caret line="51" column="63" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="51" selection-end-column="63" />
           <folding>
-            <marker date="1512103205327" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="1562:1623" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2613" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="2572:2614" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="3146:3250" ph="SELECT * FRO... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4118:4160" ph="SELECT Nombr... usuario" />
-            <marker date="1512103205327" expanded="true" signature="4695:4823" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512105436830" expanded="true" signature="903:939" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="903:940" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="1563:1624" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="2573:2615" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="3147:3251" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4119:4161" ph="SELECT Nombr... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4823" ph="SELECT * FRO... usuario" />
+            <marker date="1512105436830" expanded="true" signature="4696:4824" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/AgregarCuestionario.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/Javas/CambiarPassword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="74" column="83" lean-forward="false" selection-start-line="74" selection-start-column="83" selection-end-line="74" selection-end-column="83" />
+        <state relative-caret-position="337">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
-            <marker date="1512103790324" expanded="true" signature="1236:1281" ph="SELECT idUsu... usuario" />
-            <marker date="1512103790324" expanded="true" signature="1736:1800" ph="INSERT into cuestionario_resuelto... " />
-            <marker date="1512103790324" expanded="true" signature="1981:2076" ph="select idCue... cuestionario_resuelto" />
-            <marker date="1512103790324" expanded="true" signature="2304:2326" ph="SELECT * FRO... pregunta" />
-            <marker date="1512103790324" expanded="true" signature="2617:2670" ph="SELECT idRes... respuesta" />
-            <marker date="1512103790324" expanded="true" signature="2866:2950" ph="INSERT into cuestionario_resuelto_respuesta... " />
-            <marker date="1512103790324" expanded="true" signature="3186:3228" ph="SELECT Nombr... usuario" />
-            <marker date="1512103790324" expanded="true" signature="3632:3760" ph="SELECT * FRO... usuario" />
+            <element signature="imports" expanded="true" />
+            <marker date="1512108646583" expanded="true" signature="2200:2261" ph="SELECT * FRO... usuario" />
           </folding>
         </state>
       </provider>

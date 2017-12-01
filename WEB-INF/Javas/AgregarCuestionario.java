@@ -33,7 +33,7 @@ public class AgregarCuestionario extends HttpServlet {
         try {
             Connection con = DriverManager.getConnection(url, usuario, password);
 
-            PreparedStatement usuario1 = con.prepareStatement("SELECT idUsuario FROM usuario WHERE  nombre=?");
+            PreparedStatement usuario1 = con.prepareStatement("SELECT idUsuario FROM usuario WHERE Usuario=?");
             usuario1.setString(1, usuario);
             ResultSet queryUsuario = usuario1.executeQuery();
             queryUsuario.first();

@@ -23,7 +23,7 @@ public class Login extends HttpServlet{
 
             Connection con = DriverManager.getConnection(url, usuario, password);
 
-            PreparedStatement statement=con.prepareStatement("SELECT * FROM usuario where Nombre=?;");
+            PreparedStatement statement=con.prepareStatement("SELECT * FROM usuario where Usuario=?;");
             statement.setString(1,usuario);
             ResultSet query=statement.executeQuery();
             query.first();

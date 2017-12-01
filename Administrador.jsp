@@ -27,7 +27,7 @@
                 <option value="Investigador">Investigador</option>
                 <option value="Trabajador">Trabajador</option>
             </select>
-            <div align="center"><input type="submit" class="success button"></input></div>
+            <div align="center"><input type="submit" class="success button"/></div>
             <label style="color:red">${requestScope.statusAlta}</label>
         </form>
     </div>
@@ -41,8 +41,26 @@
                     <option value="${it.getUsuario()}">${it.getNombre()}</option>
                 </c:forEach>
             </select>
-            <div align="center"><input type="submit" class="alert button"></input></div>
+            <div align="center"><input type="submit" class="alert button"/></div>
             <label style="color:red">${requestScope.statusBaja}</label>
+        </form>
+    </div>
+</div>
+<div class="grid-x grid-padding-x">
+    <div class="large-6 medium-6 cell">
+        <h5 align="center">Cambiar password</h5>
+        <form action="CambiarPassword" method="post">
+            <input name="user" type="hidden" value="${requestScope.user}"/>
+            <input name="password" type="hidden" value="${requestScope.password}"/>
+            <select name="usuarioACambiar">
+                <c:forEach items="${requestScope.usuarios}" var="it">
+                    <option value="${it.getUsuario()}">${it.getNombre()}: ${it.getUsuario()}</option>
+                </c:forEach>
+            </select>
+            <input name="viejoPass" type="password" placeholder="Password Anterior" required/>
+            <input name="nuevoPass" type="password" placeholder="Password Nuevo" required/>
+            <div align="center"><input type="submit" class="button"/></div>
+            <label style="color:red">${requestScope.statusCambioPass}</label>
         </form>
     </div>
 </div>
