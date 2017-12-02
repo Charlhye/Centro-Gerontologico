@@ -31,6 +31,7 @@
 
         <input name="user" type="hidden" value="${requestScope.user}"/>
         <input name="password" type="hidden" value="${requestScope.password}">
+        <<input type="hidden" name="Cuestionario" value="${requestScope.cuestionario}">
         <c:forEach items="${requestScope.preguntas}" var="preg">
             <tr>
                 <td rowspan="${preg.getRespuestas().size()+2}">${preg.titulo}</td>
@@ -41,7 +42,7 @@
                 </tr>
             </c:forEach>
             <tr>
-                <td><input onclick="OtroEnab('${preg.idPregunta}-other')" type="radio" name="${preg.idPregunta}" value="Otro"> Otro<input disabled type="text" id="${preg.idPregunta}-other"></td>
+                <td><input onclick="OtroEnab('${preg.idPregunta}-other')" type="radio" name="${preg.idPregunta}" value="Otro"> Otro<input disabled type="text" name="${preg.idPregunta}-other" id="${preg.idPregunta}-other"></td>
             </tr>
         </c:forEach>
     </table>

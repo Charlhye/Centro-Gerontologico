@@ -26,11 +26,10 @@ public class RealizarEncuesta extends HttpServlet {
         }
         String url = "jdbc:mysql://localhost:3306/" + base;
 
-
         try {
-
             Connection con = DriverManager.getConnection(url, usuario, password);
-            PreparedStatement preguntas = con.prepareStatement("SELECT * FROM pregunta");
+            PreparedStatement preguntas = con.prepareStatement("SELECT * FROM pregunta WHERE idCuestionario=?");
+            preguntas.setInt(1,Integer.parseInt(request.getParameter("Cuestionario")));
             ResultSet queryPreguntas = preguntas.executeQuery();    //Query para buscar pregunta
             Vector<Pregunta> preguntas1 = new Vector<>();
             while(queryPreguntas.next()){
@@ -41,11 +40,12 @@ public class RealizarEncuesta extends HttpServlet {
                 preguntas1.add(pregunta);
 
             }
-            PreparedStatement respuestas = con.prepareStatement("SELECT Titulo,Descripcion FROM respuesta join pregunta WHERE respuesta.idPregunta = pregunta.idPregunta");//por cada pregunta query para buscar respuestas de pregunta
+            PreparedStatement respuestas = con.prepareStatement("SELECT Titulo,Descripcion FROM respuesta join pregunta WHERE respuesta.idPregunta = pregunta.idPregunta AND pregunta.idCuestionario=?");//por cada pregunta query para buscar respuestas de pregunta
+            respuestas.setInt(1,Integer.parseInt(request.getParameter("Cuestionario")));
             ResultSet queryRespuestas = respuestas.executeQuery();
             while(queryRespuestas.next()){
                 for (Pregunta aux:preguntas1) {
-                    if(aux.getTitulo().equals(queryRespuestas.getString("Titulo"))){
+                    if(aux.getTitulo().equals(queryRespuestas.getString("Titulo"))&&!queryRespuestas.getString("Descripcion").equals("Otro")){
                         Respuesta respuesta = new Respuesta();
                         respuesta.setDescripcion(queryRespuestas.getString("Descripcion"));
                         aux.getRespuestas().add(respuesta);
@@ -53,6 +53,7 @@ public class RealizarEncuesta extends HttpServlet {
                 }
             }
             request.setAttribute("preguntas",preguntas1);
+            request.setAttribute("cuestionario", request.getParameter("Cuestionario"));
             request.setAttribute("user",usuario);
             request.setAttribute("password", password);
             RequestDispatcher disp=getServletContext().getRequestDispatcher("/Cuestionarios.jsp");

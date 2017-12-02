@@ -34,15 +34,20 @@ public class VerCuestionario extends HttpServlet {
             ResultSet queryRespuestas=respuestas.executeQuery();
             Vector <Pregunta> preguntasVector = new Vector<>();
             while(queryRespuestas.next()){
-                PreparedStatement preguntas=con.prepareStatement("select * from pregunta join respuesta where pregunta.idPregunta=respuesta.idPregunta and idRespuesta=?;");
+                PreparedStatement preguntas=con.prepareStatement("select * from pregunta join respuesta join cuestionario_resuelto_respuesta where pregunta.idPregunta=respuesta.idPregunta and respuesta.idRespuesta=cuestionario_resuelto_respuesta.idRespuesta and respuesta.idRespuesta=? and idCuestionarioR=?;");
                 preguntas.setInt(1,queryRespuestas.getInt("idRespuesta"));
+                preguntas.setInt(2,idCuestionarioR);
                 ResultSet queryPreguntas=preguntas.executeQuery();
                 queryPreguntas.first();
                 Pregunta auxPreg=new Pregunta();
                 auxPreg.setTitulo(queryPreguntas.getString("Titulo"));
                 auxPreg.setRespuestas(new Vector<>());
                 Respuesta auxResp=new Respuesta();
-                auxResp.setDescripcion(queryPreguntas.getString("Descripcion"));
+                if(queryPreguntas.getString("Descripcion").equals("Otro")){
+                    auxResp.setDescripcion(queryPreguntas.getString("abierta"));
+                }else {
+                    auxResp.setDescripcion(queryPreguntas.getString("Descripcion"));
+                }
                 auxPreg.getRespuestas().add(auxResp);
                 preguntasVector.add(auxPreg);
             }

@@ -5,6 +5,24 @@ public class CuestionarioResuelto {
     public int idUsuario;
     public String nombreUsuario;
     public String fecha;
+    public int idCuestionario;
+    public String nombrePlantilla;
+
+    public String getNombrePlantilla() {
+        return nombrePlantilla;
+    }
+
+    public void setNombrePlantilla(String nombrePlantilla) {
+        this.nombrePlantilla = nombrePlantilla;
+    }
+
+    public int getIdCuestionario() {
+        return idCuestionario;
+    }
+
+    public void setIdCuestionario(int idCuestionario) {
+        this.idCuestionario = idCuestionario;
+    }
 
     public String getFecha() {
         return fecha;

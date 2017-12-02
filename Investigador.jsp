@@ -21,7 +21,7 @@
 <body>
 <div class="grid-x grid-padding-x">
     <div align="center" class="large-6 medium-6 cell">
-        <form action="AgregarCuestionarioVacio" method="post" target="_blank">
+        <form action="AgregarCuestionarioVacio" method="post">
             <input name="user" type="hidden" value="${requestScope.user}"/>
             <input name="password" type="hidden" value="${requestScope.password}">
             <input name="nombreCuestionario" type="text" placeholder="Nombre del Cuestionario" required>
@@ -37,6 +37,7 @@
                     <option value="${it.idCuestionario}">${it.nombre}</option>
                 </c:forEach>
             </select>
+            <input name="pregunta" type="text" placeholder="Pregunta" required/>
             <input type="submit" class="success button" value="Agregar Pregunta">
         </form>
     </div>
@@ -54,7 +55,7 @@
                 <input name="password" type="hidden" value="${requestScope.password}">
                 <input name="idCuestR" type="hidden" value="${it.getIdCuestionarioResuelto()}">
                 <td>${it.getFecha()}</td>
-                <td><input type="submit" value="${it.getIdCuestionarioResuelto()}"/></td>
+                <td><input type="submit" value="${it.getIdCuestionarioResuelto()}"/>${it.getNombrePlantilla()}</td>
                 <td>${it.getNombreUsuario()}</td>
             </form>
         </tr>

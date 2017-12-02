@@ -18,12 +18,21 @@
     <h1 align="center">Bienvenido ${requestScope.nombreCompleto}</h1>
 </header>
 <body>
-<div class="wrapper">
-    <form action="RealizarEncuesta" method="post">
-        <input name="user" type="hidden" value="${requestScope.user}"/>
-        <input name="password" type="hidden" value="${requestScope.password}">
-        <input type="submit" class="success button" value="Realizar encuesta"></input>
-    </form>
+<div class="grid-x grid-padding-x">
+    <div align="center" class="large-4 medium-4 cell">
+    </div>
+    <div align="center" class="large-4 medium-4 cell">
+        <form action="RealizarEncuesta" method="post">
+            <input name="user" type="hidden" value="${requestScope.user}"/>
+            <input name="password" type="hidden" value="${requestScope.password}">
+            <select name="Cuestionario">
+                <c:forEach items="${requestScope.cuestionariosVacios}" var="it">
+                    <option value="${it.idCuestionario}">${it.nombre}</option>
+                </c:forEach>
+            </select>
+            <input type="submit" class="success button" value="Realizar encuesta"></input>
+        </form>
+    </div>
 </div>
 <div style="margin: 20px;">
     <table style="width:100% ">
@@ -39,7 +48,7 @@
                     <input name="password" type="hidden" value="${requestScope.password}">
                     <input name="idCuestR" type="hidden" value="${it.getIdCuestionarioResuelto()}">
                     <td>${it.getFecha()}</td>
-                    <td><input type="submit" value="${it.getIdCuestionarioResuelto()}"/></td>
+                    <td><input type="submit" value="${it.getIdCuestionarioResuelto()}"/>${it.getNombrePlantilla()}</td>
                     <td>${it.getNombreUsuario()}</td>
                 </form>
             </tr>

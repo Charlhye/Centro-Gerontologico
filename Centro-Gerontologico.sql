@@ -28,7 +28,7 @@ CREATE TABLE `cuestionario` (
   `idCuestionario` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`idCuestionario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `cuestionario` (
 
 LOCK TABLES `cuestionario` WRITE;
 /*!40000 ALTER TABLE `cuestionario` DISABLE KEYS */;
-INSERT INTO `cuestionario` VALUES (1,'Test');
+INSERT INTO `cuestionario` VALUES (1,'Test'),(2,'Test2');
 /*!40000 ALTER TABLE `cuestionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,10 +52,13 @@ CREATE TABLE `cuestionario_resuelto` (
   `idCuestionario_Resuelto` int(11) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(11) DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
+  `idCuestionario` int(11) NOT NULL,
   PRIMARY KEY (`idCuestionario_Resuelto`),
   KEY `idUsuario_idx` (`idUsuario`),
+  KEY `idCuestionario_idx` (`idCuestionario`),
+  CONSTRAINT `idCuestionario_` FOREIGN KEY (`idCuestionario`) REFERENCES `cuestionario` (`idCuestionario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE SET NULL ON UPDATE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,6 +80,7 @@ DROP TABLE IF EXISTS `cuestionario_resuelto_respuesta`;
 CREATE TABLE `cuestionario_resuelto_respuesta` (
   `idCuestionarioR` int(11) NOT NULL,
   `idRespuesta` int(11) NOT NULL,
+  `abierta` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`idCuestionarioR`,`idRespuesta`),
   KEY `idRespuesta_idx` (`idRespuesta`),
   CONSTRAINT `idCuestionarioR` FOREIGN KEY (`idCuestionarioR`) REFERENCES `cuestionario_resuelto` (`idCuestionario_Resuelto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -107,7 +111,7 @@ CREATE TABLE `pregunta` (
   PRIMARY KEY (`idPregunta`),
   KEY `idCuestionario_idx` (`idCuestionario`),
   CONSTRAINT `idCuestionario` FOREIGN KEY (`idCuestionario`) REFERENCES `cuestionario` (`idCuestionario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +120,7 @@ CREATE TABLE `pregunta` (
 
 LOCK TABLES `pregunta` WRITE;
 /*!40000 ALTER TABLE `pregunta` DISABLE KEYS */;
-INSERT INTO `pregunta` VALUES (3,'Género',1),(4,'Estado civil',1),(5,'Ocupación actual',1),(6,'Tiene servicio médico de',1),(7,'La casa donde habita es',1),(8,'¿Con quién comparte su hogar?',1),(9,'¿Alguien lo apoya económicamente?',1),(10,'¿Usted padece?',1);
+INSERT INTO `pregunta` VALUES (3,'Género',1),(4,'Estado civil',1),(5,'Ocupación actual',1),(6,'Tiene servicio médico de',1),(7,'La casa donde habita es',1),(8,'¿Con quién comparte su hogar?',1),(9,'¿Alguien lo apoya económicamente?',1),(10,'¿Usted padece?',1),(11,'Orientación Sexual',2);
 /*!40000 ALTER TABLE `pregunta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,7 +139,7 @@ CREATE TABLE `respuesta` (
   PRIMARY KEY (`idRespuesta`),
   KEY `idPregunta_idx` (`idPregunta`),
   CONSTRAINT `idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`idPregunta`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +148,7 @@ CREATE TABLE `respuesta` (
 
 LOCK TABLES `respuesta` WRITE;
 /*!40000 ALTER TABLE `respuesta` DISABLE KEYS */;
-INSERT INTO `respuesta` VALUES (3,3,'Masculino',3),(4,3,'Casado(a)',4),(5,3,'Empleado',5),(6,3,'IMSS',6),(7,3,'Propia',7),(8,3,'Vive solo',8),(9,4,'Su pareja',9),(10,4,'Problemas del corazón',10),(11,3,'Femenino',3),(12,3,'Viudo(a)',4),(13,3,'Separado(a)',4),(14,3,'Soltero(a)',4),(15,3,'Negocio propio',5),(16,3,'Jubilado',5),(17,3,'Hogar',5),(18,3,'ISSTE',6),(19,3,'Seguro popular',6),(20,3,'ISSFAM',6),(21,3,'No tiene',6),(22,3,'Rentada',7),(23,3,'Prestada',7),(24,3,'Con pareja',8),(25,3,'Algun hijo',8),(26,3,'Sus hijos',9),(27,3,'Sus hermanos',9),(28,3,'Diabetes',10),(29,3,'Enfermedad pulmonar',10),(30,3,'Cáncer',10);
+INSERT INTO `respuesta` VALUES (3,3,'Masculino',3),(4,3,'Casado(a)',4),(5,3,'Empleado',5),(6,3,'IMSS',6),(7,3,'Propia',7),(8,3,'Vive solo',8),(9,3,'Su pareja',9),(10,3,'Problemas del corazón',10),(11,3,'Femenino',3),(12,3,'Viudo(a)',4),(13,3,'Separado(a)',4),(14,3,'Soltero(a)',4),(15,3,'Negocio propio',5),(16,3,'Jubilado',5),(17,3,'Hogar',5),(18,3,'ISSTE',6),(19,3,'Seguro popular',6),(20,3,'ISSFAM',6),(21,3,'No tiene',6),(22,3,'Rentada',7),(23,3,'Prestada',7),(24,3,'Con pareja',8),(25,3,'Algun hijo',8),(26,3,'Sus hijos',9),(27,3,'Sus hermanos',9),(28,3,'Diabetes',10),(29,3,'Enfermedad pulmonar',10),(30,3,'Cáncer',10),(31,4,'Otro',3),(32,4,'Otro',4),(33,4,'Otro',5),(34,4,'Otro',6),(35,4,'Otro',7),(36,4,'Otro',8),(37,4,'Otro',9),(38,4,'Otro',10),(39,3,'Heterosexual',11),(40,3,'Homoseual',11),(41,3,'Otro',11);
 /*!40000 ALTER TABLE `respuesta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,7 +166,7 @@ CREATE TABLE `usuario` (
   `Usuario` varchar(45) NOT NULL,
   `Activo` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -171,7 +175,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Administrador','administrador','administrador',1),(8,'Investigador','Pedro Lopez','pedrin',0);
+INSERT INTO `usuario` VALUES (1,'Administrador','administrador','administrador',1),(8,'Investigador','Pedro Lopez','pedrin',0),(9,'Investigador','Abraham Silva','abs12',1),(10,'Trabajador','Rafael Cardenas','rafita69',0),(11,'Trabajador','Rafael Cardenas','rafiqui',1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -184,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-30 21:36:55
+-- Dump completed on 2017-12-01 21:28:48

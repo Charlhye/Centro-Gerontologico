@@ -71,6 +71,12 @@ public class Login extends HttpServlet{
                         aux.setNombreUsuario(cuestionarios.getString("Nombre"));
                         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                         aux.setFecha(dateFormat.format(cuestionarios.getTimestamp("fecha")));
+                        aux.setIdCuestionario(cuestionarios.getInt("idCuestionario"));
+                        PreparedStatement plantilla = con.prepareStatement("SELECT * FROM centrogerontologico.cuestionario WHERE idCuestionario=?");
+                        plantilla.setInt(1, cuestionarios.getInt("idCuestionario"));
+                        ResultSet queryPlantilla = plantilla.executeQuery();
+                        queryPlantilla.first();
+                        aux.setNombrePlantilla(queryPlantilla.getString("Nombre"));
                         cuestionarioResueltos.add(aux);
                     }
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
@@ -106,6 +112,12 @@ public class Login extends HttpServlet{
                         aux.setNombreUsuario(cuestionarios.getString("Nombre"));
                         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                         aux.setFecha(dateFormat.format(cuestionarios.getTimestamp("fecha")));
+                        aux.setIdCuestionario(cuestionarios.getInt("idCuestionario"));
+                        PreparedStatement plantilla = con.prepareStatement("SELECT * FROM centrogerontologico.cuestionario WHERE idCuestionario=?");
+                        plantilla.setInt(1, cuestionarios.getInt("idCuestionario"));
+                        ResultSet queryPlantilla = plantilla.executeQuery();
+                        queryPlantilla.first();
+                        aux.setNombrePlantilla(queryPlantilla.getString("Nombre"));
                         cuestionarioResueltos.add(aux);
                     }
                     for (CuestionarioResuelto it:cuestionarioResueltos
@@ -113,6 +125,18 @@ public class Login extends HttpServlet{
                         System.out.println(it.idCuestionarioResuelto);
                     }
                     request.setAttribute("cuestionarios",cuestionarioResueltos);
+
+                    PreparedStatement cuestionariosVacios2 = con.prepareStatement("SELECT * FROM cuestionario");
+                    ResultSet queryCuestionariosVacios2 = cuestionariosVacios2.executeQuery();
+
+                    Vector<Cuestionario> cuestionarios12 = new Vector<>();
+                    while (queryCuestionariosVacios2.next()){
+                        Cuestionario aux = new Cuestionario();
+                        aux.idCuestionario = queryCuestionariosVacios2.getInt("idCuestionario");
+                        aux.nombre = queryCuestionariosVacios2.getString("Nombre");
+                        cuestionarios12.add(aux);
+                    }
+                    request.setAttribute("cuestionariosVacios", cuestionarios12);
                     break;
             }
 
