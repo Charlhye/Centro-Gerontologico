@@ -33,7 +33,11 @@
 </head>
 <body>
 <h5>A&ntilde;adir pregunta a cuestionario ${requestScope.idCuestionario}</h5>
-<form action="AgregarPregunta" method="post">
+<form action="AgregarRespuesta" method="post">
+    <input name="pregunta" type="hidden" value="${requestScope.pregunta}"/>
+    <input name="Cuestionario" type="hidden" value="${requestScope.idCuestionario}"/>
+    <input name="user" type="hidden" value="${requestScope.user}"/>
+    <input name="password" type="hidden" value="${requestScope.password}">
     <table>
         <tbody id="generate-here">
         <tr>
